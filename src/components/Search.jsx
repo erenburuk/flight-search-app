@@ -12,6 +12,8 @@ const Search = ({ cities, onSearchSubmit }) => {
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
+    if (event.target.value === 'oneWay') setReturnDate(null);
+    setError('');
   };
 
   const handleSelectChange = (value, setValue) => {
@@ -36,12 +38,7 @@ const Search = ({ cities, onSearchSubmit }) => {
   };
 
   const handleSearchSubmit = () => {
-    if (
-      !fromValue ||
-      !toValue ||
-      !departureDate ||
-      (selectedOption === 'roundTrip' && !returnDate)
-    ) {
+    if (!fromValue || !toValue || !departureDate) {
       setError('⛔ Error! All information must be filled out.');
       return;
     }
@@ -49,7 +46,13 @@ const Search = ({ cities, onSearchSubmit }) => {
       setError('⛔ Error! Origin and destination cities must be different.');
       return;
     }
-    if (departureDate > returnDate) {
+
+    if (selectedOption === 'roundTrip' && !returnDate) {
+      setError('⛔ Error! Return date must be filled out for round trip.');
+      return;
+    }
+
+    if (selectedOption === 'roundTrip' && departureDate > returnDate) {
       setError('⛔ Error! Invalid date selection.');
       return;
     }
@@ -158,7 +161,6 @@ const Search = ({ cities, onSearchSubmit }) => {
               />
             </svg>
 
-            {selectedOption === 'roundTrip'}
             <DatePicker
               selected={departureDate}
               onChange={handleDepartureDate}
