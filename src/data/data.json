@@ -1,0 +1,322 @@
+{
+  "flights": [
+    {
+      "origin": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "destination": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "airline": "Turkish Airlines",
+      "departure_time": "2024-02-20T08:00:00",
+      "arrival_time": "2024-02-20T10:00:00",
+      "duration": "2 hours",
+      "price": 1400.0
+    },
+    {
+      "origin": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "destination": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "airline": "Pegasus Airlines",
+      "departure_time": "2024-02-20T10:00:00",
+      "arrival_time": "2024-02-20T12:00:00",
+      "duration": "2 hours",
+      "price": 1200.0
+    },
+    {
+      "origin": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "destination": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "airline": "Turkish Airlines",
+      "departure_time": "2024-02-20T10:30:00",
+      "arrival_time": "2024-02-20T12:30:00",
+      "duration": "2 hours",
+      "price": 1550.0
+    },
+    {
+      "origin": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "destination": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "airline": "AnadoluJet",
+      "departure_time": "2024-02-20T08:00:00",
+      "arrival_time": "2024-02-20T10:00:00",
+      "duration": "2 hours",
+      "price": 1250.0
+    },
+    {
+      "origin": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "destination": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "airline": "SunExpress",
+      "departure_time": "2024-02-20T16:00:00",
+      "arrival_time": "2024-02-20T18:00:00",
+      "duration": "2 hours",
+      "price": 1100.0
+    },
+    {
+      "origin": {
+        "city_name": "Ankara",
+        "airport_code": "ESB"
+      },
+      "destination": {
+        "city_name": "Antalya",
+        "airport_code": "AYT"
+      },
+      "airline": "Pegasus Airlines",
+      "departure_time": "2024-02-20T12:30:00",
+      "arrival_time": "2024-02-20T14:15:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1200.0
+    },
+    {
+      "origin": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "destination": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "airline": "AnadoluJet",
+      "departure_time": "2024-02-20T16:45:00",
+      "arrival_time": "2024-02-20T18:30:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1200.0
+    },
+    {
+      "origin": {
+        "city_name": "Antalya",
+        "airport_code": "AYT"
+      },
+      "destination": {
+        "city_name": "Ankara",
+        "airport_code": "ESB"
+      },
+      "airline": "SunExpress",
+      "departure_time": "2024-02-20T20:00:00",
+      "arrival_time": "2024-02-20T21:45:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1200.0
+    },
+    {
+      "origin": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "destination": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "airline": "Turkish Airlines",
+      "departure_time": "2024-02-25T08:30:00",
+      "arrival_time": "2024-02-25T10:30:00",
+      "duration": "2 hours",
+      "price": 1400.0
+    },
+    {
+      "origin": {
+        "city_name": "Antalya",
+        "airport_code": "AYT"
+      },
+      "destination": {
+        "city_name": "Ankara",
+        "airport_code": "ESB"
+      },
+      "airline": "Pegasus Airlines",
+      "departure_time": "2024-02-25T13:15:00",
+      "arrival_time": "2024-02-25T15:00:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1200.0
+    },
+    {
+      "origin": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "destination": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "airline": "AnadoluJet",
+      "departure_time": "2024-02-25T17:30:00",
+      "arrival_time": "2024-02-25T19:15:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1200.0
+    },
+    {
+      "origin": {
+        "city_name": "Ankara",
+        "airport_code": "ESB"
+      },
+      "destination": {
+        "city_name": "Antalya",
+        "airport_code": "AYT"
+      },
+      "airline": "SunExpress",
+      "departure_time": "2024-02-25T21:45:00",
+      "arrival_time": "2024-02-25T23:30:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1200.0
+    },
+    {
+      "origin": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "destination": {
+        "city_name": "Ankara",
+        "airport_code": "ESB"
+      },
+      "airline": "Pegasus Airlines",
+      "departure_time": "2024-03-01T08:00:00",
+      "arrival_time": "2024-03-01T09:45:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1100.0
+    },
+    {
+      "origin": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "destination": {
+        "city_name": "Antalya",
+        "airport_code": "AYT"
+      },
+      "airline": "Turkish Airlines",
+      "departure_time": "2024-03-05T12:00:00",
+      "arrival_time": "2024-03-05T13:45:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1050.0
+    },
+    {
+      "origin": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "destination": {
+        "city_name": "Ankara",
+        "airport_code": "ESB"
+      },
+      "airline": "AnadoluJet",
+      "departure_time": "2024-03-10T16:30:00",
+      "arrival_time": "2024-03-10T18:15:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1200.0
+    },
+    {
+      "origin": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "destination": {
+        "city_name": "Antalya",
+        "airport_code": "AYT"
+      },
+      "airline": "SunExpress",
+      "departure_time": "2024-03-15T20:45:00",
+      "arrival_time": "2024-03-15T22:30:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1150.0
+    },
+    {
+      "origin": {
+        "city_name": "Ankara",
+        "airport_code": "ESB"
+      },
+      "destination": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "airline": "SunExpress",
+      "departure_time": "2024-03-20T08:30:00",
+      "arrival_time": "2024-03-20T10:30:00",
+      "duration": "2 hours",
+      "price": 1300.0
+    },
+    {
+      "origin": {
+        "city_name": "Ankara",
+        "airport_code": "ESB"
+      },
+      "destination": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "airline": "Turkish Airlines",
+      "departure_time": "2024-03-25T13:15:00",
+      "arrival_time": "2024-03-25T15:00:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1250.0
+    },
+    {
+      "origin": {
+        "city_name": "Antalya",
+        "airport_code": "AYT"
+      },
+      "destination": {
+        "city_name": "Istanbul",
+        "airport_code": "IST"
+      },
+      "airline": "Pegasus Airlines",
+      "departure_time": "2024-03-30T17:30:00",
+      "arrival_time": "2024-03-30T19:15:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1350.0
+    },
+    {
+      "origin": {
+        "city_name": "Antalya",
+        "airport_code": "AYT"
+      },
+      "destination": {
+        "city_name": "Izmir",
+        "airport_code": "ADB"
+      },
+      "airline": "AnadoluJet",
+      "departure_time": "2024-03-31T21:45:00",
+      "arrival_time": "2024-03-31T23:30:00",
+      "duration": "1 hours 45 minutes",
+      "price": 1400.0
+    }
+  ],
+  "cities": [
+    {
+      "city_name": "Istanbul",
+      "airport_code": "IST"
+    },
+    {
+      "city_name": "Izmir",
+      "airport_code": "ADB"
+    },
+    {
+      "city_name": "Ankara",
+      "airport_code": "ESB"
+    },
+    {
+      "city_name": "Antalya",
+      "airport_code": "AYT"
+    }
+  ]
+}
