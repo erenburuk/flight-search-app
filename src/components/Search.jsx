@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
+import useWindowDimensions from '../utils/useWindowDimensions';
 import 'react-datepicker/dist/react-datepicker.css';
+import './customDatePickerWidth.css';
 
 const Search = ({ cities, onSearchSubmit }) => {
   const [selectedOption, setSelectedOption] = useState('roundTrip');
@@ -9,6 +11,7 @@ const Search = ({ cities, onSearchSubmit }) => {
   const [departureDate, setDepartureDate] = useState(null);
   const [returnDate, setReturnDate] = useState(null);
   const [error, setError] = useState('');
+  const { height, width } = useWindowDimensions();
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
@@ -69,9 +72,9 @@ const Search = ({ cities, onSearchSubmit }) => {
   };
 
   return (
-    <div className='flex flex-row items-center backdrop-blur-3xl bg-white/50 rounded-xl mb-8 p-8 z-10'>
-      <div className='w-full mr-10'>
-        <div className='flex items-start justify-between mb-3'>
+    <div className='flex flex-col lg:flex-row items-center backdrop-blur-3xl bg-white/50 rounded-xl mb-8 p-8 z-10'>
+      <div className='w-full lg:mr-10'>
+        <div className='flex flex-col items-center text-center lg:text-start lg:items-start lg:justify-between mb-3'>
           <div>
             <label className='mr-4 cursor-pointer'>
               <input
@@ -89,17 +92,17 @@ const Search = ({ cities, onSearchSubmit }) => {
                 value='oneWay'
                 checked={selectedOption === 'oneWay'}
                 onChange={handleOptionChange}
-                className='mr-2 accent-slate-700'
+                className='mb-2 lg:mb-0 lg:mr-2 accent-slate-700'
               />
               One-way
             </label>
           </div>
-          {error && <p className='text-red-600'>{error}</p>}
+          {error && <p className='text-red-600 mb-2 lg:mb-0'>{error}</p>}
         </div>
-        <div className='flex flex-row justify-start items-center'>
-          <div className='flex flex-row items-center gap-2 mr-5'>
+        <div className='flex flex-col gap-3 justify-center min-[1500px]:flex-row lg:justify-start items-center'>
+          <div className='flex w-full items-center gap-2 lg:mb-0 min-[1500px]:mr-8'>
             <select
-              className='rounded-xl p-3 w-40 outline-sky-200 cursor-pointer'
+              className='rounded-xl p-3 w-full lg:w-40 outline-sky-200 cursor-pointer'
               placeholdertext='From'
               value={fromValue}
               onChange={(e) => handleSelectChange(e.target.value, setFromValue)}
@@ -119,7 +122,7 @@ const Search = ({ cities, onSearchSubmit }) => {
               viewBox='0 0 24 24'
               strokeWidth='1.5'
               stroke='currentColor'
-              className='w-6 h-6 cursor-pointer'
+              className='w-12 h-12 lg:w-6 lg:h-6 cursor-pointer'
               onClick={handleSwapClick}
             >
               <path
@@ -130,7 +133,7 @@ const Search = ({ cities, onSearchSubmit }) => {
             </svg>
 
             <select
-              className='rounded-xl p-3 w-40 outline-sky-200 cursor-pointer'
+              className='rounded-xl p-3 w-full lg:w-40 outline-sky-200 cursor-pointer'
               placeholdertext='To'
               value={toValue}
               onChange={(e) => handleSelectChange(e.target.value, setToValue)}
@@ -145,47 +148,38 @@ const Search = ({ cities, onSearchSubmit }) => {
               ))}
             </select>
           </div>
-          <div className='flex flex-row items-center'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth='1.5'
-              stroke='currentColor'
-              className='w-6 h-6 mr-2'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z'
+          <div className='flex w-full gap-9 lg:gap-10 min-[1500px]:gap-3 mb-6 lg:mb-0'>
+            <div className={width < 1024 ? `customDatePickerWidth` : ``}>
+              <DatePicker
+                selected={departureDate}
+                onChange={handleDepartureDate}
+                dateFormat='dd/MM/yyyy'
+                placeholderText='Departure date'
+                enableTabLoop={false}
+                className='rounded-xl h-10 px-4 border border-gray-300 outline-sky-200 w-full lg:w-40'
               />
-            </svg>
-
-            <DatePicker
-              selected={departureDate}
-              onChange={handleDepartureDate}
-              dateFormat='dd/MM/yyyy'
-              placeholdertext='Departure date'
-              className='z-10 mr-2 rounded-xl w-40 h-10 px-4 border border-gray-300 outline-sky-200'
-            />
-            <DatePicker
-              selected={returnDate}
-              onChange={handleReturnDate}
-              dateFormat='dd/MM/yyyy'
-              placeholdertext='Return date'
-              className={`rounded-xl w-40 h-10 px-4 border border-gray-300 outline-sky-200 ${
-                selectedOption === 'oneWay' ? 'hidden' : ''
-              }`}
-            />
+            </div>
+            {selectedOption !== 'oneWay' && (
+              <div className={width < 1024 ? `customDatePickerWidth` : ``}>
+                <DatePicker
+                  selected={returnDate}
+                  onChange={handleReturnDate}
+                  dateFormat='dd/MM/yyyy'
+                  placeholderText='Return date'
+                  enableTabLoop={false}
+                  className='rounded-xl h-10 px-4 border border-gray-300 outline-sky-200 w-full lg:w-40'
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
       <button
-        className='bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 text-white rounded-xl px-6 py-5 flex items-center'
+        className='bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 text-white rounded-xl px-4 py-2 lg:px-6 lg:py-5 flex items-center'
         onClick={handleSearchSubmit}
       >
-        <span className='mr-2 text-xl'>Search</span>
-        <span className='text-2xl'>✈</span>
+        <span className='mr-2 text-lg lg:text-xl'>Search</span>
+        <span className='text-xl lg:text-2xl'>✈</span>
       </button>
     </div>
   );
